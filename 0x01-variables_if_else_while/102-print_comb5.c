@@ -6,35 +6,27 @@
 
 int main(void)
 {
-	int a, fd, ld;
-	int a2, fd2, ld2;
+	int i, j;
 
-	while (a <= 98)
+	for (i = 0; i < 100; i++)
 	{
-		fd = (a / 10 + '0');
-		ld = (a % 10 + '0');
-		a2 = 0;
-		while (a2 <= 99)
+		for (j = 0; j < 100; j++)
 		{
-			fd2 = (a2 / 10 + '0');
-			ld2 = (a2 % 10 + '0');
-			if (a < a2)
+			if (i < j)
 			{
-				putchar(fd);
-				putchar(ld);
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
 				putchar(' ');
-				putchar(fd2);
-				putchar(ld2);
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
 
-				if (a != 98)
+				if (i != 98 || j != 99)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			a2++;
 		}
-		a++;
 	}
 	putchar('\n');
 	return (0);
