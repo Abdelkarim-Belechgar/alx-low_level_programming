@@ -1,7 +1,8 @@
 #include <unistd.h>
 
 /**
- * main - _putchar
+ * _putchar - main
+ * @c : the character to be checked
  * Return: success.
  */
 
